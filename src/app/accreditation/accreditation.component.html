@@ -1,0 +1,164 @@
+<div class="global-page accred-accreditation">
+    <div class="title-bar title-bar-splitted">
+        <div class="title-bar-left">
+            <h1 class="page-title">Accréditations</h1>
+        </div>
+        <div class="title-bar-right">
+            <button class="accred-button accred-button-red">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="user-plus"></mat-icon> Nouvelle accréditation 
+            </button>
+        </div>
+    </div>
+    <div class="title-toolbar flex-container">
+        <div class="title-toolbar-left">
+            <div class="accred-input-search">
+                <mat-icon class="accred-input-search-icon" mat-list-icon svgIcon="search"></mat-icon>
+                <input id="accred-example-input" class="accred-input" type="search" placeholder="Rechercher…">
+                <button class="accred-button accred-button-white">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+        <div class="title-toolbar-right">
+            <span class="label">Filtres</span>
+            <button class="accred-button accred-button-white">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="activity"></mat-icon> États <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
+            </button>
+
+            <button class="accred-button accred-button-white">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="briefcase"></mat-icon> Unités <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
+            </button>
+
+            <button class="accred-button accred-button-white">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="users"></mat-icon> Personnes <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
+            </button>
+
+            <button class="accred-button accred-button-white">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="calendar"></mat-icon> Date de fin <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="title-toolbar-footer flex-container">
+        <div class="title-toolbar-left">
+            <mat-chip-list class="accred-chiplist">
+                <mat-chip class="accred-chiplist-chip accred-chiplist-chip--tags" selected>
+                    État actifs<mat-icon class="mat-icon mat-icon-right" svgIcon="x"></mat-icon>
+                </mat-chip>
+            </mat-chip-list>
+        </div>
+        <div class="title-toolbar-right flex-container">
+            <button class="accred-button accred-button-tertiary">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="x-circle"></mat-icon> Enlever les filtres 
+            </button>
+            <div class="accred-chiplist-separator"></div>
+            <button class="accred-button accred-button-tertiary">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="download-cloud"></mat-icon> Export de liste
+            </button>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="content">
+            <section class="data-table">
+                <table mat-table matSort [dataSource]="dataSource" class="accred-table">
+
+            <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th">
+                    <mat-checkbox (change)="$event ? masterToggle() : null"
+                        [checked]="selection.hasValue() && isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                    </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+            <!-- person Column -->
+            <ng-container matColumnDef="people">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Personne / <span class="grey">Sciper</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.people.person}}</span><br> 
+                    <span class="grey">{{element.people.sciper}}</span>
+                </td>
+            </ng-container>
+
+            <!-- unitcf Column -->
+            <ng-container matColumnDef="unitcf">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Unité / <span class="grey">CF</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.unitcf.unit}}</span><br>   
+                    <span class="grey">{{element.unitcf.cf}}</span>
+                </td>
+            </ng-container>
+
+            <!-- statutc Column -->
+            <ng-container matColumnDef="statutc">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Statut / <span class="grey">Classe</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.statutc.statut}}</span><br>    
+                    <span class="grey">{{element.statutc.classe}}</span>
+                </td>
+            </ng-container>
+
+            <!-- functionl Column -->
+            <ng-container matColumnDef="functionl">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Fonction FR / <span class="grey">EN</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.functionl.fr}}</span><br>    
+                    <span class="grey">{{element.functionl.en}}</span>
+                </td>
+            </ng-container>
+            <!-- startdate Column -->
+            <ng-container matColumnDef="startdate">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Début </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.startdate}}</span>    
+                </td>
+            </ng-container>
+            <!-- enddate Column -->
+            <ng-container matColumnDef="enddate">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Échéance </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.enddate}}</span>    
+                </td>
+            </ng-container>
+            <!-- state Column -->
+            <ng-container matColumnDef="state">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header centered> État </th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-chip class="accred-info-tag accred-info-tag--active">
+                        {{element.state}}<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+                    </mat-chip>
+                </td>
+            </ng-container>
+   
+            <ng-container matColumnDef="icon1">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th centered" ><mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="refresh-cw"></mat-icon></th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="{{element.icon1}}"></mat-icon>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="icon2">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th centered" ><mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="trash-2"></mat-icon></th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-icon class="mat-icon action-icon" svgIcon="{{element.icon2}}"></mat-icon>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+            </tr>
+        </table>
+    </section>
+
+    <mat-paginator class="accred-paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+        
+            </div>
+    </div><!--END page-content-->
+ </div> <!--END accred-accreditation-->

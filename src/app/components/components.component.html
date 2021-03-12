@@ -1,0 +1,290 @@
+<div class="accred-components">
+    <h1>Component page</h1>
+
+    <!-- Buttons -->
+    <h2>Buttons</h2>
+    <button class="accred-button accred-button-red">Red button</button>
+    <button class="accred-button accred-button-red">
+        <mat-icon class="mat-icon mat-icon-left" svgIcon="plus"></mat-icon> Red button
+    </button>
+
+    <button class="accred-button accred-button-red">
+        <mat-icon class="mat-icon mat-icon-left" svgIcon="plus"></mat-icon> Red button <mat-icon class="mat-icon mat-icon-right" svgIcon="users"></mat-icon>
+    </button>
+    <button class="accred-button accred-button-red">
+        Red button <mat-icon class="mat-icon mat-icon-right" svgIcon="plus"></mat-icon>
+    </button>
+    <br />
+    <br />
+    <button class="accred-button accred-button-white">White button</button>
+    <button class="accred-button accred-button-white">
+        <mat-icon class="mat-icon mat-icon-left" svgIcon="chevron-down"></mat-icon>White button 
+    </button>
+
+    <button class="accred-button accred-button-white">
+        <mat-icon class="mat-icon mat-icon-left" svgIcon="plus"></mat-icon> White button <mat-icon class="mat-icon mat-icon-right" svgIcon="plus"></mat-icon>
+    </button>
+
+    <!-- Inputs -->
+    <h2>Inputs</h2>
+    <div class="accred-input-search">
+        <mat-icon class="accred-input-search-icon" mat-list-icon svgIcon="search"></mat-icon>
+        <input id="accred-example-input" class="accred-input" type="search" placeholder="Rechercher…">
+        <button class="accred-button accred-button-white">
+            Rechercher
+        </button>
+    </div>
+
+    <!-- Chips - https://material.angular.io/components/chips/overview -->
+    <h2>Chip</h2>
+    <div>
+        <mat-chip-list class="accred-chiplist">
+            <mat-chip class="accred-chiplist-chip" selected>
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Tout
+            </mat-chip>
+            <mat-chip class="accred-chiplist-chip">
+                Unités
+            </mat-chip>
+            <mat-chip class="accred-chiplist-chip">
+                Centres financiers
+            </mat-chip>
+            <mat-chip class="accred-chiplist-chip">
+                Fonds
+            </mat-chip>
+            <div class="accred-chiplist-separator"></div>
+            <mat-chip class="accred-chiplist-chip">
+                Ressources de mon unité
+            </mat-chip>
+        </mat-chip-list>
+    </div>
+
+    <!-- Chips - https://material.angular.io/components/chips/overview -->
+    <h2>Chip tags</h2>
+    <div>
+        <mat-chip-list class="accred-chiplist">
+            <mat-chip class="accred-chiplist-chip accred-chiplist-chip--tags" selected>
+                Tout<mat-icon class="mat-icon mat-icon-right" svgIcon="x"></mat-icon>
+            </mat-chip>
+            <mat-chip class="accred-chiplist-chip accred-chiplist-chip--tags">
+                Unités
+            </mat-chip>
+            <mat-chip class="accred-chiplist-chip accred-chiplist-chip--tags" >
+                Centres financiers
+            </mat-chip>
+            <mat-chip class="accred-chiplist-chip accred-chiplist-chip--tags">
+                Fonds
+            </mat-chip>
+            <div class="accred-chiplist-separator"></div>
+            <mat-chip class="accred-chiplist-chip accred-chiplist-chip--tags">
+                Ressources de mon unité
+            </mat-chip>
+        </mat-chip-list>
+    </div>
+
+    <h2>Custom info tags</h2>
+    <mat-chip class="accred-info-tag accred-info-tag--active">
+        Active<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+    </mat-chip>
+    <mat-chip class="accred-info-tag accred-info-tag--expired">
+        Expirée<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+    </mat-chip>
+    <mat-chip class="accred-info-tag accred-info-tag--sent">
+        Soumise<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+    </mat-chip>
+    <mat-chip class="accred-info-tag accred-info-tag--renew">
+        À renouveler<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+    </mat-chip>
+
+
+
+    <!-- https://material.angular.io/components/select/overview -->
+    <h2>Select</h2>
+    <div class="accred-select">
+        <label class="accred-select-label">Select an option</label>
+        <mat-select class="accred-select">
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+    </div>
+
+    <!-- https://material.angular.io/components/tooltip/overview -->
+    <h2>Tooltips</h2>
+    <img src="../assets/icons/info.svg" class="accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above"
+        matTooltip="Origine : Administrateur IT (Rôle)">
+    <!--  <button-->
+    <!--          (click)="tooltip.show()"-->
+    <!--          aria-label="use full for debug"-->
+    <!--          class="example-action-button">-->
+    <!--    show-->
+    <!--  </button>-->
+
+
+    <!-- https://material.angular.io/components/tabs/overview -->
+    <h2>Tabs</h2>
+    <mat-tab-group class="accred-tabgroup" disableRipple>
+        <mat-tab>
+            <ng-template mat-tab-label class="accred-tabgroup-label">
+                <img class="accred-tabgroup-label-img" src="../assets/icons/bookOpen.svg">
+                Données
+            </ng-template>
+            <h4>Données</h4>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label class="accred-tabgroup-label">
+                <img class="accred-tabgroup-label-img" src="../assets/icons/user.svg">
+                Accréditations
+            </ng-template>
+            <h4>Accréditations</h4>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label class="accred-tabgroup-label">
+                <img class="accred-tabgroup-label-img" src="../assets/icons/key.svg">
+                Autorisations
+            </ng-template>
+            <h4>Autorisations</h4>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label class="accred-tabgroup-label">
+                <img class="accred-tabgroup-label-img" src="../assets/icons/folder.svg">
+                Historique
+            </ng-template>
+            <h4>Historique</h4>
+        </mat-tab>
+    </mat-tab-group>
+
+    <!-- https://material.angular.io/components/paginator/overview -->
+    <h2>Paginator</h2>
+    <mat-paginator class="accred-paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+
+    <!-- https://material.angular.io/components/datepicker/overview -->
+    <h2>Datepicker</h2>
+    <mat-form-field class="accred-datepicker">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker class="accred-datepicker-picker">
+            <mat-datepicker-actions>
+                <button mat-button matDatepickerApply
+                    class="accred-datepicker-picker-apply accred-button accred-button-red">Valider</button>
+                <button mat-button matDatepickerCancel
+                    class="accred-datepicker-picker-cancel accred-button accred-button-white">Annuler</button>
+            </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+
+    <!-- https://material.angular.io/components/table/overview -->
+    <h2>Table</h2>
+    <table mat-table matSort [dataSource]="dataSource" class="accred-table">
+
+        <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef class="accred-table-th">
+                <mat-checkbox (change)="$event ? masterToggle() : null"
+                    [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                </mat-checkbox>
+            </td>
+        </ng-container>
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Weight </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+        </tr>
+    </table>
+
+
+    <!-- https://material.angular.io/components/sidenav/overview -->
+    <h2>Sidenav</h2>
+    <div>
+        <div class="accred-header">
+            <button mat-icon-button color="accent" (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <mat-drawer-container class="accred-sidenav" autosize>
+            <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+                <mat-nav-list>
+                    <mat-list-item class="accred-menu accred-menu-selected">
+                        <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="home"></mat-icon>
+                        <h4 class="accred-menu-text" mat-line *ngIf="drawer.opened">Vue d'ensemble</h4>
+                    </mat-list-item>
+                    <mat-list-item class="accred-menu">
+                        <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
+                        <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Accréditations</h4>
+                    </mat-list-item>
+                    <mat-list-item class="accred-menu">
+                        <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="key"></mat-icon>
+                        <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Autorisations</h4>
+                    </mat-list-item>
+
+                    <mat-expansion-panel expanded>
+                        <mat-expansion-panel-header>
+                            <mat-list-item class="accred-menu">
+                                <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="bookOpen"></mat-icon>
+                                <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Catalogue</h4>
+                            </mat-list-item>
+                        </mat-expansion-panel-header>
+
+                        <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+                            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="users"></mat-icon>
+                            <h4 mat-line class="accred-menu-text">Personnes</h4>
+                        </mat-list-item>
+                        <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+                            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="briefcase"></mat-icon>
+                            <h4 mat-line class="accred-menu-text">Unités</h4>
+                        </mat-list-item>
+                        <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+                            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="file"></mat-icon>
+                            <h4 mat-line class="accred-menu-text">Ressource</h4>
+                        </mat-list-item>
+                        <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+                            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="clipboard"></mat-icon>
+                            <h4 mat-line class="accred-menu-text">Rôles</h4>
+                        </mat-list-item>
+                        <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+                            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="unlock"></mat-icon>
+                            <h4 mat-line class="accred-menu-text">Droits</h4>
+                        </mat-list-item>
+
+                    </mat-expansion-panel>
+
+                </mat-nav-list>
+            </mat-drawer>
+
+            <div class="example-sidenav-content">
+                You screen Contents goes here !
+            </div>
+        </mat-drawer-container>
+    </div>
+</div>

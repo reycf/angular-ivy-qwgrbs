@@ -1,4 +1,62 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <div class="accred-header">
+    <button mat-icon-button color="accent" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <mat-drawer-container class="accred-sidenav" autosize>
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+      <mat-nav-list>
+        <mat-list-item class="accred-menu accred-menu-selected">
+          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="home"></mat-icon>
+          <h4 class="accred-menu-text" mat-line *ngIf="drawer.opened">Vue d'ensemble</h4>
+        </mat-list-item>
+        <mat-list-item class="accred-menu">
+          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
+          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Accréditations</h4>
+        </mat-list-item>
+        <mat-list-item class="accred-menu">
+          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="key"></mat-icon>
+          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Autorisations</h4>
+        </mat-list-item>
+
+        <mat-expansion-panel expanded>
+          <mat-expansion-panel-header>
+            <mat-list-item class="accred-menu">
+              <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="bookOpen"></mat-icon>
+              <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Catalogue</h4>
+            </mat-list-item>
+          </mat-expansion-panel-header>
+
+          <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="users"></mat-icon>
+            <h4 mat-line class="accred-menu-text">Personnes</h4>
+          </mat-list-item>
+          <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="briefcase"></mat-icon>
+            <h4 mat-line class="accred-menu-text">Unités</h4>
+          </mat-list-item>
+          <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="file"></mat-icon>
+            <h4 mat-line class="accred-menu-text">Ressource</h4>
+          </mat-list-item>
+          <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="clipboard"></mat-icon>
+            <h4 mat-line class="accred-menu-text">Rôles</h4>
+          </mat-list-item>
+          <mat-list-item class="accred-menu" *ngIf="drawer.opened">
+            <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="unlock"></mat-icon>
+            <h4 mat-line class="accred-menu-text">Droits</h4>
+          </mat-list-item>
+
+        </mat-expansion-panel>
+
+      </mat-nav-list>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</div>
+

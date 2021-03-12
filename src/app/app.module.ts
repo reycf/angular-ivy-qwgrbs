@@ -1,13 +1,69 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatChipsModule, MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material/chips';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { VueEnsembleComponent } from './vue-ensemble/vue-ensemble.component';
+import { ComponentsComponent } from './components/components.component';
+import { AccreditationComponent } from './accreditation/accreditation.component';
+import { AccreditationFormComponent } from './accreditation-form/accreditation-form.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    VueEnsembleComponent,
+    ComponentsComponent,
+    AccreditationComponent,
+    AccreditationFormComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatChipsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatDatepickerModule,
+    MatPaginatorModule,
+    MatNativeDateModule,
+    MatTooltipModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatSortModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatExpansionModule,
+    HttpClientModule,
+    MatListModule
+  ],
+  providers: [
+    MatIconRegistry,
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill', floatLabel: 'always' } },
+    { provide: MAT_CHIPS_DEFAULT_OPTIONS, useValue: { disableRipple: true } }, // Doesn't work unfortunately
+    { provide: MAT_DATE_LOCALE, useValue: 'fr-CH' },
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
