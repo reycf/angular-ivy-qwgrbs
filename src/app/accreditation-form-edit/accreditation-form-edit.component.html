@@ -1,0 +1,249 @@
+<div class="global-page accred-accreditation-form">
+    <div class="title-bar title-bar-splitted">
+        <div class="title-bar-left">
+            <a class="back-button" href="#"><mat-icon class="mat-icon icon-16" svgIcon="corner-up-left"></mat-icon>Annuler</a>
+            <h1 class="page-title">Nouvelle accréditation</h1>
+        </div>
+        <div class="title-bar-right">
+            <button class="accred-button accred-button-tertiary">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="x-circle"></mat-icon> Annuler et refermer 
+            </button>
+            <button class="accred-button accred-button-red">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="save"></mat-icon> Sauvegarder brouillon 
+            </button>
+        </div>
+    </div>
+    <div class="page-content flex-container">
+        <div class="left-part-line-container"><div class="left-part-line edit-mode"></div></div>
+        <div class="accred-form-blocks">
+            <!--Personne accréditée-->
+            <div class="form-block">
+                <div class="form-block-icon edit-mode">
+                    <mat-icon class="mat-icon icon-16" svgIcon="user-plus"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Personne accréditée<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <table class="accred-table mat-table">
+                        <tr><th class="accred-table-th">Détails</th><th class="accred-table-th">Portrait</th><th class="accred-table-th">Prénom</th><th class="accred-table-th">Nom</th><th class="accred-table-th">Sciper</th><th class="accred-table-th">Accrédité(e) ?</th><th class="accred-table-th">Date de naissance</th><th class="accred-table-th">Date de création</th><th class="accred-table-th"></th></tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div></td><td>Jean-Loup</td><td>De La Batellerie</td><td>164486</td><td>Oui (1)</td><td>12 / 03 / 1992</td><td>15 / 01 / 2015</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div></td><td>Jean-Loup</td><td>De La Batellerie</td><td>164486</td><td>Oui (1)</td><td>12 / 03 / 1992</td><td>15 / 01 / 2015</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div></td><td>Jean-Loup</td><td>De La Batellerie</td><td>164486</td><td>Oui (1)</td><td>12 / 03 / 1992</td><td>15 / 01 / 2015</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div></td><td>Jean-Loup</td><td>De La Batellerie</td><td>164486</td><td>Oui (1)</td><td>12 / 03 / 1992</td><td>15 / 01 / 2015</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                    </table>
+                    <mat-paginator class="accred-paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                    </mat-paginator>
+                </div>
+            </div>
+            <!--Unité-->
+            <div class="form-block">
+                <div class="form-block-icon edit-mode">
+                    <mat-icon class="mat-icon icon-16" svgIcon="briefcase"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Unité<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <table class="accred-table mat-table">
+                        <tr><th class="accred-table-th">Détails</th><th class="accred-table-th">Nom</th><th class="accred-table-th">Acronyme</th><th class="accred-table-th">Responsable d'unité</th><th class="accred-table-th">Hiérachie</th><th class="accred-table-th"></th></tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td>Laboratoire d'algorithmes et systèmes d'apprentissage</td><td>LASA<br><span class="grey">CF 1234</span></td><td>Kumar Varoon Agrawal<br><span class="grey">263766</span></td><td>EPFL / SB / ISIC / LAS</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td>Laboratoire d'algorithmes et systèmes d'apprentissage</td><td>LASA<br><span class="grey">CF 1234</span></td><td>Kumar Varoon Agrawal<br><span class="grey">263766</span></td><td>EPFL / SB / ISIC / LAS</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td>Laboratoire d'algorithmes et systèmes d'apprentissage</td><td>LASA<br><span class="grey">CF 1234</span></td><td>Kumar Varoon Agrawal<br><span class="grey">263766</span></td><td>EPFL / SB / ISIC / LAS</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td>Laboratoire d'algorithmes et systèmes d'apprentissage</td><td>LASA<br><span class="grey">CF 1234</span></td><td>Kumar Varoon Agrawal<br><span class="grey">263766</span></td><td>EPFL / SB / ISIC / LAS</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                    </table>
+                    <mat-paginator class="accred-paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                    </mat-paginator>
+                </div>
+            </div>
+            <!--Profil de l'accréditation-->
+            <div class="form-block">
+                <div class="form-block-icon edit-mode">
+                    <mat-icon class="mat-icon icon-16" svgIcon="settings"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Profil de l'accréditation<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <div class="form-profil">
+                        <div class="form-input accred-select">
+                            <label class="accred-select-label">Statut EPFL</label>
+                            <mat-select class="accred-select" placeholder="Sélectionner…">
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </div>
+                        <div class="form-input accred-input-wrapper">
+                            <label class="accred-select-label">Classe</label>
+                            <div class="input-container icon-right">
+                                <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="search"></mat-icon>
+                                <input id="accred-example-input" class="accred-input" type="text" placeholder="Rechercher…">
+                            </div>
+                        </div>
+                        <div class="form-input accred-input-wrapper">
+                            <label class="accred-select-label">Date de début</label>
+                            <div class="input-container icon-right">
+                                <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="calendar"></mat-icon>
+                                <input id="accred-example-input" class="accred-input" type="text" placeholder="Rechercher…">
+                            </div>
+                        </div>
+                        <div class="form-input accred-input-wrapper">
+                            <label class="accred-select-label">Échéance<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></label>
+                            <div class="input-container icon-right">
+                                <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="calendar"></mat-icon>
+                                <input id="accred-example-input" class="accred-input" type="text" placeholder="Rechercher…">
+                            </div>
+                        </div>
+                        <button class="accred-button accred-button-red">
+                            <mat-icon class="mat-icon mat-icon-left" svgIcon="arrow-right"></mat-icon> Étape suivante
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--Fonction-->
+            <div class="form-block">
+                <div class="form-block-icon edit-mode">
+                    <mat-icon class="mat-icon icon-16" svgIcon="award"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Fonction<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="list"></mat-icon> Voir toutes les fonctions 
+                    </button>
+                </header>
+                <div class="accred-input-wrapper accred-input-search">
+                    <div class="input-container icon-left">
+                        <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="search"></mat-icon>
+                        <input id="accred-example-input" class="accred-input" type="search" placeholder="Rechercher…">
+                        <button class="accred-button accred-button-white">
+                            Rechercher
+                        </button>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <table class="accred-table mat-table">
+                        <tr><th class="accred-table-th">Libellé masculin</th><th class="accred-table-th">Libellé féminin</th><th class="accred-table-th">Libellé en anglais</th><th class="accred-table-th"></th></tr>
+                        <tr>
+                            <td>Consultant Accréditation assurance qualité (OAQ)</td><td>Consultante Accréditation assurance qualité (OAQ)</td><td>Quality Assurance Accreditation (OAQ) Consultant</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td>Consultant Business</td><td>Consultante Business</td><td>Business Consultant </td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td>Consultant Innosuisse</td><td>Consultante Innosuisse</td><td>Innosuisse Consultant</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td>Consultant Scientifique</td><td>Consultante Scientifique</td><td>Scientific Consultant</td><td><button class="accred-button accred-button-white button-hidden"><mat-icon class="mat-icon mat-icon-left" svgIcon="check"></mat-icon>Sélectionner 
+                        </button></td>
+                        </tr>
+                        
+                    </table>
+                    <mat-paginator class="accred-paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                    </mat-paginator>
+                </div>
+            </div>
+
+            <!--Autorisations-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="key"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Autorisations<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <table class="accred-table mat-table">
+                        <tr><th class="accred-table-th">Détails</th><th class="accred-table-th">Autorisation / service</th><th class="accred-table-th"></th><th class="accred-table-th">Abréviation</th><th class="accred-table-th">Ressource</th><th class="accred-table-th">Type</th><th class="accred-table-th">Activation</th></tr>
+                        <tr><td></td><td>Hôte<br><span class="grey">Accès IT</span></td><td></td><td></td><td></td><td>Statut</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle [disableRipple]="true" class="accred-toggle"></mat-slide-toggle>
+                        </td></tr>
+
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Compte utilisateur dans Active Directory<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Présence dans les mailing listes d'unités<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle  checked = "checked" [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Compte utilisateur dans Active Directory<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Présence dans les mailing listes d'unités<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle checked = "checked" [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Compte utilisateur dans Active Directory<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td><mat-slide-toggle [disableRipple]="true" class="accred-toggle"></mat-slide-toggle></td></tr>
+                    </table>
+                </div>
+            </div>
+            <!--Finalisation-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="check"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Finalisation<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <div class="accred-input-wrapper">
+                        <label class="accred-select-label">Commentaire (optionnel)</label>
+                        <div class="input-container">
+                            <textarea class="accred-textarea" placeholder="Your comment here…"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="bt-area">
+                    <button class="accred-button accred-button-red">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="user-plus"></mat-icon> Accréditer
+                    </button>
+                    <button class="accred-button accred-button-white">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="save"></mat-icon> Sauvegarder brouillon
+                    </button>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="x-circle"></mat-icon> Annuler et refermer
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>  
+        
+ </div> <!--END accred-accreditation-form-->

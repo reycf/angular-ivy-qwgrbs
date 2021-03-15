@@ -10,6 +10,7 @@ import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/mat
 import { MatChipsModule, MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
@@ -26,6 +27,7 @@ import { VueEnsembleComponent } from './vue-ensemble/vue-ensemble.component';
 import { ComponentsComponent } from './components/components.component';
 import { AccreditationComponent } from './accreditation/accreditation.component';
 import { AccreditationFormComponent } from './accreditation-form/accreditation-form.component';
+import { AccreditationFormEditComponent } from './accreditation-form-edit/accreditation-form-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { AccreditationFormComponent } from './accreditation-form/accreditation-f
     VueEnsembleComponent,
     ComponentsComponent,
     AccreditationComponent,
-    AccreditationFormComponent
+    AccreditationFormComponent,
+    AccreditationFormEditComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { AccreditationFormComponent } from './accreditation-form/accreditation-f
     MatIconModule,
     MatExpansionModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    MatSlideToggleModule
   ],
   providers: [
     MatIconRegistry,

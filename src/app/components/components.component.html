@@ -24,15 +24,71 @@
     <button class="accred-button accred-button-white">
         <mat-icon class="mat-icon mat-icon-left" svgIcon="plus"></mat-icon> White button <mat-icon class="mat-icon mat-icon-right" svgIcon="plus"></mat-icon>
     </button>
+    <br />
+    <br />
+    <button class="accred-button accred-button-tertiary">
+        <mat-icon class="mat-icon mat-icon-left" svgIcon="x-circle"></mat-icon> Enlever les filtres 
+    </button>
+
+    <button class="accred-button accred-button-tertiary">
+        <mat-icon class="mat-icon mat-icon-left" svgIcon="download-cloud"></mat-icon> Export de liste
+    </button>
 
     <!-- Inputs -->
     <h2>Inputs</h2>
-    <div class="accred-input-search">
-        <mat-icon class="accred-input-search-icon" mat-list-icon svgIcon="search"></mat-icon>
-        <input id="accred-example-input" class="accred-input" type="search" placeholder="Rechercher…">
-        <button class="accred-button accred-button-white">
-            Rechercher
-        </button>
+
+    <div class="accred-input-wrapper">
+        <label class="accred-select-label">Leading icon</label>
+        <div class="input-container icon-left">
+            <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="search"></mat-icon>
+            <input id="accred-example-input" class="accred-input" type="text" placeholder="Rechercher…">
+        </div>
+    </div>
+
+    <div class="accred-input-wrapper">
+        <label class="accred-select-label">Trailing icon</label>
+        <div class="input-container icon-right">
+            <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="search"></mat-icon>
+            <input id="accred-example-input" class="accred-input" type="text" placeholder="Rechercher…">
+        </div>
+    </div>
+
+    <div class="accred-input-wrapper accred-input-search">
+        <label class="accred-select-label">input width button</label>
+        <div class="input-container icon-left">
+            <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="search"></mat-icon>
+            <input id="accred-example-input" class="accred-input" type="search" placeholder="Rechercher…">
+            <button class="accred-button accred-button-white">
+                Rechercher
+            </button>
+        </div>
+    </div>
+    <!-- https://material.angular.io/components/radio/overview -->
+    <br />
+    <br />
+    <h2>slide toggle</h2>
+    <mat-slide-toggle class="accred-toggle"></mat-slide-toggle>
+
+    <br />
+    <br />
+    <h2>Textarea</h2>
+    <div class="accred-input-wrapper">
+        <label class="accred-select-label">Textarea label</label>
+        <div class="input-container">
+            <textarea class="accred-textarea" placeholder="Your comment here…"></textarea>
+        </div>
+    </div>
+
+
+    <!-- https://material.angular.io/components/select/overview -->
+    <h2>Select</h2>
+    <div class="accred-select">
+        <label class="accred-select-label">Select an option</label>
+        <mat-select class="accred-select">
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
     </div>
 
     <!-- Chips - https://material.angular.io/components/chips/overview -->
@@ -97,16 +153,7 @@
 
 
 
-    <!-- https://material.angular.io/components/select/overview -->
-    <h2>Select</h2>
-    <div class="accred-select">
-        <label class="accred-select-label">Select an option</label>
-        <mat-select class="accred-select">
-            <mat-option value="option1">Option 1</mat-option>
-            <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
-            <mat-option value="option3">Option 3</mat-option>
-        </mat-select>
-    </div>
+   
 
     <!-- https://material.angular.io/components/tooltip/overview -->
     <h2>Tooltips</h2>

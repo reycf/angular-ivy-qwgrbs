@@ -1,1 +1,150 @@
-<p>accreditation-form works!</p>
+<div class="global-page accred-accreditation-form">
+    <div class="title-bar title-bar-splitted">
+        <div class="title-bar-left">
+            <a class="back-button" href="#"><mat-icon class="mat-icon icon-16" svgIcon="corner-up-left"></mat-icon>Annuler</a>
+            <h1 class="page-title">Nouvelle accréditation</h1>
+        </div>
+        <div class="title-bar-right">
+            <button class="accred-button accred-button-tertiary">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="x-circle"></mat-icon> Annuler et refermer 
+            </button>
+            <button class="accred-button accred-button-red">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="save"></mat-icon> Sauvegarder brouillon 
+            </button>
+        </div>
+    </div>
+    <div class="page-content flex-container">
+        <div class="left-part-line-container"><div class="left-part-line"></div></div>
+        <div class="accred-form-blocks">
+            <!--Personne accréditée-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="user-plus"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Personne accréditée<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <div class="user-infos flex-container">
+                        <div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div>
+                        <div class="name">Jean-Loup De La Batellerie</div>   
+                    </div>
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Email</div><div class="info-content"><a href="mailto:jean-loup.delabatellerie@epfl.ch">jean-loup.delabatellerie@epfl.ch</a></div></li>
+                        <li><div class="info-label">SCIPER</div><div class="info-content">164486</div></li>
+                        <li><div class="info-label">Date de naissance</div><div class="info-content">12 / 03 / 1992</div></li>
+                        <li><div class="info-label">Date de création</div><div class="info-content">15 / 01 / 2015</div></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Unité-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="briefcase"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Unité<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Unité</div><div class="info-content">Laboratoire d'architecture et technologies éphémères</div></li>
+                        <li><div class="info-label">Acronyme</div><div class="info-content">LASE</div></li>
+                        <li><div class="info-label">Hiérarchie</div><div class="info-content"><a href="">EPFL</a> / <a href="">ENAC</a> / <a href="">IA</a> / <a href="">LASE</a></div></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Profil de l'accréditation-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="settings"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Profil de l'accréditation<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Statut EPFL</div><div class="info-content"><a href="mailto:jean-loup.delabatellerie@epfl.ch">jean-loup.delabatellerie@epfl.ch</a></div></li>
+                        <li><div class="info-label">Classe</div><div class="info-content">164486</div></li>
+                        <li><div class="info-label">Date de début</div><div class="info-content">14 / 10 / 2020</div></li>
+                        <li><div class="info-label">Échéance</div><div class="info-content">14 / 01 / 2021</div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Fonction-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="award"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Fonction<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Libellé masculin</div><div class="info-content">Consultant scientifique</div></li>
+                        <li><div class="info-label">Libellé féminin</div><div class="info-content">Consultante scientifique</div></li>
+                        <li><div class="info-label">Libellé en anglais</div><div class="info-content">Scientific Consultant</div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Autorisations-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="key"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Autorisations<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <table class="accred-table mat-table">
+                        <tr><th class="accred-table-th">Détails</th><th class="accred-table-th">Autorisation / service</th><th class="accred-table-th"></th><th class="accred-table-th">Abréviation</th><th class="accred-table-th">Ressource</th><th class="accred-table-th">Type</th><th class="accred-table-th">Activation</th></tr>
+                        <tr><td></td><td>Hôte<br><span class="grey">Accès IT</span></td><td></td><td></td><td></td><td>Statut</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Compte utilisateur dans Active Directory<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Présence dans les mailing listes d'unités<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Compte utilisateur dans Active Directory<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Présence dans les mailing listes d'unités<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Compte utilisateur dans Active Directory<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                        <tr><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="bookOpen"></mat-icon></td><td><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="corner-up-left"></mat-icon></td><td>Parution dans l'annuaire Web<br><span class="grey">People</span></td><td>botweb</td><td>EPFL<br><span class="grey">Unité</span></td><td>Droit</td><td>Activé</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!--Finalisation-->
+            <div class="form-block">
+                <div class="form-block-icon">
+                    <mat-icon class="mat-icon icon-16" svgIcon="check"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Finalisation<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Commentaire</div><div class="info-content">Demande par e-mail reçue du responsable d'unité</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
+ </div> <!--END accred-accreditation-form-->
