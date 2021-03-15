@@ -8,12 +8,29 @@
     <mat-drawer #drawer mode="side" disableClose="true" opened="true">
       <mat-nav-list>
         <mat-list-item class="accred-menu accred-menu-selected">
+          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon=""></mat-icon>
+          <h4 class="accred-menu-text" mat-line *ngIf="drawer.opened"><a routerLink="/"
+              routerLinkActive="active">(Composants)</a></h4>
+        </mat-list-item>
+        <mat-list-item class="accred-menu accred-menu-selected">
           <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="home"></mat-icon>
-          <h4 class="accred-menu-text" mat-line *ngIf="drawer.opened">Vue d'ensemble</h4>
+          <h4 class="accred-menu-text" mat-line *ngIf="drawer.opened"><a routerLink="/vue-ensemble"
+              routerLinkActive="active">Vue d'ensemble</a></h4>
         </mat-list-item>
         <mat-list-item class="accred-menu">
           <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
-          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Accréditations</h4>
+          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened"><a routerLink="/accreditation"
+              routerLinkActive="active">Accréditations</a></h4>
+        </mat-list-item>
+        <mat-list-item class="accred-menu">
+          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
+          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened"><a routerLink="/accreditation-form"
+              routerLinkActive="active">(Accreditation-Form)</a></h4>
+        </mat-list-item>
+        <mat-list-item class="accred-menu">
+          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
+          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened"><a routerLink="/accreditation-form-edit"
+              routerLinkActive="active">(Accreditation-Form-Edit)</a></h4>
         </mat-list-item>
         <mat-list-item class="accred-menu">
           <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="key"></mat-icon>
@@ -59,4 +76,3 @@
     </div>
   </mat-drawer-container>
 </div>
-
