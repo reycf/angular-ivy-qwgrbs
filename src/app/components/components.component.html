@@ -11,7 +11,10 @@
     <button class="accred-button accred-button-red">
         <mat-icon class="mat-icon mat-icon-left" svgIcon="plus"></mat-icon> Red button <mat-icon class="mat-icon mat-icon-right" svgIcon="users"></mat-icon>
     </button>
-    <button class="accred-button accred-button-red">
+    <button disabled class="accred-button accred-button-red">
+        Red button <mat-icon class="mat-icon mat-icon-right" svgIcon="plus"></mat-icon>
+    </button>
+    <button class="accred-button accred-button-red disabled">
         Red button <mat-icon class="mat-icon mat-icon-right" svgIcon="plus"></mat-icon>
     </button>
     <br />
@@ -220,6 +223,22 @@
             </mat-datepicker-actions>
         </mat-datepicker>
     </mat-form-field>
+
+
+    <mat-form-field class="accred-datepicker accred-datepicker--button">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker class="accred-datepicker-picker">
+            <mat-datepicker-actions>
+                <button mat-button matDatepickerApply
+                    class="accred-datepicker-picker-apply accred-button accred-button-red">Valider</button>
+                <button mat-button matDatepickerCancel
+                    class="accred-datepicker-picker-cancel accred-button accred-button-white">Annuler</button>
+            </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+    
 
     <!-- https://material.angular.io/components/table/overview -->
     <h2>Table</h2>

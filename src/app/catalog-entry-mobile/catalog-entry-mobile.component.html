@@ -1,0 +1,66 @@
+<div class="global-page accred-catalog-entry-mobile">
+    <a class="back-button" href="#"><mat-icon class="mat-icon icon-16" svgIcon="corner-up-left"></mat-icon>Revenir en arrière</a>
+    <div class="title-bar title-bar-splitted">
+        <div class="title-bar-left">
+            <div class="user-info flex-container">
+                <div class="avatar-container">
+                    <div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div>
+                </div>
+                <div>
+                    <h1 class="page-title">Jean-Loup De La Batellerie</h1>
+                    <p>Crée le 15 Janvier 2015 par <span class="red">Patrick Mueller</span></p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="title-bar-right">
+            <button class="accred-button accred-button-tertiary">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="star"></mat-icon> Ajouter à ma vue d'ensemble 
+            </button>
+        </div>
+    </div>
+    <div class="page-content flex-container">
+        <mat-tab-group class="accred-tabgroup" disableRipple>
+            <mat-tab>
+                <ng-template mat-tab-label class="accred-tabgroup-label">
+                    <img class="accred-tabgroup-label-img" src="../assets/icons/user.svg">
+                    Accréditations
+                </ng-template>
+                <div class="content-item">
+                    <div class="content-header flex-container">
+                        <h4>LASE</h4>
+                        <mat-chip class="accred-info-tag accred-info-tag--active">
+                            Active<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+                        </mat-chip>
+                    </div>
+                  
+                    <h5>Laboratoire d'architecture et technologies éphémères</h5>
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Statut</div><div class="info-content">Hôte</div></li>
+                        <li><div class="info-label">Échéance</div><div class="info-content">15 / 01 / 2015</div></li>
+                    </ul>
+                </div>
+                <div class="content-item">
+                    <div class="content-header flex-container">
+                        <h4>LASE</h4>
+                        <mat-chip class="accred-info-tag accred-info-tag--expired">
+                            Expirée<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+                        </mat-chip>
+                    </div>
+                    <h5>Laboratoire d'architecture et technologies éphémères</h5>
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Statut</div><div class="info-content">Hôte</div></li>
+                        <li><div class="info-label">Échéance</div><div class="info-content">15 / 01 / 2015</div></li>
+                    </ul>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label class="accred-tabgroup-label">
+                    <img class="accred-tabgroup-label-img" src="../assets/icons/user.svg">
+                    Autorisations
+                </ng-template>
+                <h4>Autorisations</h4>
+            </mat-tab>
+        </mat-tab-group>
+        
+ </div> <!--END accred-accreditation-form-->

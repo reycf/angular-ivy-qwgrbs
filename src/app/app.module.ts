@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,8 +25,21 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { VueEnsembleComponent } from './vue-ensemble/vue-ensemble.component';
 import { ComponentsComponent } from './components/components.component';
 import { AccreditationComponent } from './accreditation/accreditation.component';
+import { AccreditationUnitsComponent } from './accreditation-units/accreditation-units.component';
 import { AccreditationFormComponent } from './accreditation-form/accreditation-form.component';
 import { AccreditationFormEditComponent } from './accreditation-form-edit/accreditation-form-edit.component';
+import { AccreditationFormMobileComponent } from './accreditation-form-mobile/accreditation-form-mobile.component';
+import { AccreditationMobileComponent } from './accreditation-mobile/accreditation-mobile.component';
+import { CatalogEntryComponent } from './catalog-entry/catalog-entry.component';
+import { CatalogEntryMobileComponent } from './catalog-entry-mobile/catalog-entry-mobile.component';
+import { PermissionFormErrorComponent } from './permission-form-error/permission-form-error.component';
+import { KeyActionsComponent } from './key-actions/key-actions.component';
+import { KeyActionsOrderComponent } from './key-actions-order/key-actions-order.component';
+import { AccreditationRenewComponent } from './accreditation-renew/accreditation-renew.component';
+import { PermissionDetailMobile } from './permission-detail-mobile/permission-detail-mobile.component';
+import {MatTreeModule} from '@angular/material/tree';
+
+
 
 @NgModule({
   declarations: [
@@ -35,8 +47,18 @@ import { AccreditationFormEditComponent } from './accreditation-form-edit/accred
     VueEnsembleComponent,
     ComponentsComponent,
     AccreditationComponent,
+    AccreditationUnitsComponent,
     AccreditationFormComponent,
-    AccreditationFormEditComponent
+    AccreditationFormEditComponent,
+    AccreditationFormMobileComponent,
+    AccreditationMobileComponent,
+    CatalogEntryComponent,
+    CatalogEntryMobileComponent,
+    PermissionFormErrorComponent,
+    KeyActionsComponent,
+    KeyActionsOrderComponent,
+    AccreditationRenewComponent,
+    PermissionDetailMobile
   ],
   imports: [
     BrowserModule,
@@ -60,7 +82,8 @@ import { AccreditationFormEditComponent } from './accreditation-form-edit/accred
     MatExpansionModule,
     HttpClientModule,
     MatListModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTreeModule
   ],
   providers: [
     MatIconRegistry,

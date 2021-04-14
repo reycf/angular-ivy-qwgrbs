@@ -12,7 +12,7 @@ export class AppComponent {
     private domSanitizer: DomSanitizer) {
 
 
-  ['list','arrow-right','award','edit','save', 'corner-up-left', 'refresh-ccw', 'refresh-cw','trash-2', 'x', 'clock', 'check', 'download-cloud', 'x-circle', 'home', 'user', 'key', 'bookOpen', 'users', 'search', 'briefcase', 'file', 'clipboard', 'unlock', 'users', 'user-plus', 'info', 'help-circle', 'settings', 'plus', 'chevron-down','activity', 'calendar'].forEach(name => {
+  ['eye','message-square','pause-circle','copy','shuffle','folder','lock','alert-circle','x-square','check-square','plus-circle','minus-circle','external-link','star','corner-down-right', 'list','arrow-right','award','edit','save', 'corner-up-left', 'refresh-ccw', 'refresh-cw','trash-2', 'x', 'clock', 'check', 'download-cloud', 'x-circle', 'home', 'user', 'key', 'bookOpen', 'users', 'search', 'briefcase', 'file', 'clipboard', 'unlock', 'users', 'user-plus', 'info', 'help-circle', 'settings', 'plus', 'chevron-down','chevron-up','activity', 'calendar'].forEach(name => {
     this.matIconRegistry.addSvgIcon(
       name,
       this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${name}.svg`)

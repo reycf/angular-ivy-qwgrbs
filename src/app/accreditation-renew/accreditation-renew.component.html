@@ -1,4 +1,4 @@
-<div class="global-page accred-accreditation">
+<div class="global-page accred-accreditation-renew">
     <div class="title-bar title-bar-splitted">
         <div class="title-bar-left">
             <h1 class="page-title">Accréditations</h1>
@@ -140,9 +140,30 @@
             </ng-container>
    
             <ng-container matColumnDef="icon1">
-                <th mat-header-cell *matHeaderCellDef class="accred-table-th centered" ><mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="refresh-cw"></mat-icon></th>
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th centered" >
+                    <mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="refresh-cw"></mat-icon>
+                </th>
                 <td mat-cell *matCellDef="let element">
-                    <mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="{{element.icon1}}"></mat-icon>
+                    <div class="action-bt-wrapper">
+                        <mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="{{element.icon1}}"></mat-icon>
+                        <div class="action-submenu">
+                            <ul class="action-submenu-list">
+                                <li class="submenu-list--item">
+                                    <div>
+                                        <mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="refresh-cw"></mat-icon> Ajouter:
+                                        <ul class="action-submenu-list action-submenu-list--level2">
+                                            <li>1 mois</li>
+                                            <li>2 mois</li>
+                                            <li>3 mois</li>
+                                            <li>6 mois</li>
+                                            <li>Une année</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="submenu-list--item"><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="calendar"></mat-icon>Choisir date d’échéance</li>                                
+                            </ul>
+                        </div>
+                    </div>
                 </td>
             </ng-container>
             <ng-container matColumnDef="icon2">
@@ -160,6 +181,126 @@
 
     <mat-paginator class="accred-paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
     </mat-paginator>
+        
+            </div>
+    </div><!--END page-content-->
+
+    <div class="page-content page-content-specific">
+        <div class="content">
+            <section class="data-table">
+                <table mat-table matSort [dataSource]="dataSource" class="accred-table">
+
+            <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th">
+                    <mat-checkbox (change)="$event ? masterToggle() : null"
+                        [checked]="selection.hasValue() && isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                    </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+            <!-- person Column -->
+            <ng-container matColumnDef="people">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Personne / <span class="grey">Sciper</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.people.person}}</span><br> 
+                    <span class="grey">{{element.people.sciper}}</span>
+                </td>
+            </ng-container>
+
+            <!-- unitcf Column -->
+            <ng-container matColumnDef="unitcf">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Unité / <span class="grey">CF</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.unitcf.unit}}</span><br>   
+                    <span class="grey">{{element.unitcf.cf}}</span>
+                </td>
+            </ng-container>
+
+            <!-- statutc Column -->
+            <ng-container matColumnDef="statutc">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Statut / <span class="grey">Classe</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.statutc.statut}}</span><br>    
+                    <span class="grey">{{element.statutc.classe}}</span>
+                </td>
+            </ng-container>
+
+            <!-- functionl Column -->
+            <ng-container matColumnDef="functionl">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Fonction FR / <span class="grey">EN</span></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.functionl.fr}}</span><br>    
+                    <span class="grey">{{element.functionl.en}}</span>
+                </td>
+            </ng-container>
+            <!-- startdate Column -->
+            <ng-container matColumnDef="startdate">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Début </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.startdate}}</span>    
+                </td>
+            </ng-container>
+            <!-- enddate Column -->
+            <ng-container matColumnDef="enddate">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header> Échéance </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.enddate}}</span>    
+                </td>
+            </ng-container>
+            <!-- state Column -->
+            <ng-container matColumnDef="state">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th" mat-sort-header centered> État </th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-chip class="accred-info-tag accred-info-tag--active">
+                        {{element.state}}<mat-icon class="mat-icon mat-icon-right" svgIcon="clock"></mat-icon>
+                    </mat-chip>
+                </td>
+            </ng-container>
+   
+            <ng-container matColumnDef="icon1">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th centered" >
+                    <mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="refresh-cw"></mat-icon>
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="action-bt-wrapper">
+                        <mat-form-field class="accred-datepicker" >
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker" [disableRipple]="true">
+                            <mat-datepicker-toggle matSuffix [for]="picker" disableRipple>
+                                <mat-icon matDatepickerToggleIcon><mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="refresh-cw"></mat-icon></mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker class="accred-datepicker-picker">
+                                <mat-datepicker-actions>
+                                    <button mat-button matDatepickerApply
+                                        class="accred-datepicker-picker-apply accred-button accred-button-red">Valider</button>
+                                    <button mat-button matDatepickerCancel
+                                        class="accred-datepicker-picker-cancel accred-button accred-button-white">Annuler</button>
+                                </mat-datepicker-actions>
+                            </mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="icon2">
+                <th mat-header-cell *matHeaderCellDef class="accred-table-th centered" ><mat-icon class="mat-icon mat-icon-right action-icon" svgIcon="trash-2"></mat-icon></th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-icon class="mat-icon action-icon" svgIcon="{{element.icon2}}"></mat-icon>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+            </tr>
+        </table>
+    </section>
         
             </div>
     </div><!--END page-content-->

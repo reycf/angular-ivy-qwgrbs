@@ -7,25 +7,13 @@
   <mat-drawer-container class="accred-sidenav" autosize>
     <mat-drawer #drawer mode="side" disableClose="true" opened="true">
       <mat-nav-list>
-        <mat-list-item class="accred-menu accred-menu-selected" routerLink="/" routerLinkActive="active">
-          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon=""></mat-icon>
-          <h4 class="accred-menu-text" mat-line *ngIf="drawer.opened">(Composants)</h4>
-        </mat-list-item>
-        <mat-list-item class="accred-menu accred-menu-selected" routerLink="/vue-ensemble" routerLinkActive="active">
+        <mat-list-item class="accred-menu accred-menu-selected">
           <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="home"></mat-icon>
           <h4 class="accred-menu-text" mat-line *ngIf="drawer.opened">Vue d'ensemble</h4>
         </mat-list-item>
-        <mat-list-item class="accred-menu" routerLink="/accreditation" routerLinkActive="active">
+        <mat-list-item class="accred-menu">
           <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
           <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">Accréditations</h4>
-        </mat-list-item>
-        <mat-list-item class="accred-menu" routerLink="/accreditation-form" routerLinkActive="active">
-          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
-          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened">(Accreditation-Form)</h4>
-        </mat-list-item>
-        <mat-list-item class="accred-menu" routerLink="/accreditation-form-edit" routerLinkActive="active">
-          <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="user"></mat-icon>
-          <h4 mat-line class="accred-menu-text" *ngIf="drawer.opened"> (Accreditation-Form-Edit)</h4>
         </mat-list-item>
         <mat-list-item class="accred-menu">
           <mat-icon class="accred-menu-icon" mat-list-icon svgIcon="key"></mat-icon>
@@ -71,3 +59,4 @@
     </div>
   </mat-drawer-container>
 </div>
+

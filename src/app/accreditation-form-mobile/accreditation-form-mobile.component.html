@@ -1,0 +1,172 @@
+<div class="global-page accred-accreditation-mobile">
+    <div class="mobile-action-bar">
+        <button class="accred-button accred-button-white">
+            <mat-icon class="mat-icon mat-icon-left" svgIcon="save"></mat-icon> Mettre en brouillon 
+        </button>
+        <button class="accred-button accred-button-red disabled" disabled>
+            <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Accréditer 
+        </button>
+    </div>
+    <div class="title-bar title-bar-splitted">
+        <div class="title-bar-left">
+            <a class="back-button" href="#"><mat-icon class="mat-icon icon-16" svgIcon="corner-up-left"></mat-icon>Annuler</a>
+            <h1 class="page-title">Nouvelle accréditation</h1>
+        </div>
+    </div>
+    <div class="page-content flex-container">
+        <div class="left-part-line-container"><div class="left-part-line edit-mode"></div></div>
+        <div class="accred-form-blocks">
+            <!--Personne accréditée-->
+            <div class="form-block">
+                <header class="flex-container">
+                    <div class="form-block-icon">
+                        <mat-icon class="mat-icon icon-16" svgIcon="user-plus"></mat-icon>
+                    </div>
+                    <h2>Personne accréditée</h2>
+                </header>
+                <div class="block-content">
+                    <div class="user-infos flex-container">
+                        <div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div>
+                        <div class="name">Jean-Loup de La Batellerie - 164486<br><span class="email">jean-loup.delabatellerie@epfl.ch</span></div>
+                    </div>
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Date de naissance</div><div class="info-content">12 / 03 / 1992</div></li>
+                        <li><div class="info-label">Date de création</div><div class="info-content">15 / 01 / 2015</div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separator-bar">
+                <div class="bar"></div>
+            </div>
+            <!--Unité-->
+            <div class="form-block">
+                <header class="flex-container">
+                    <div class="form-block-icon">
+                        <mat-icon class="mat-icon icon-16" svgIcon="briefcase"></mat-icon>
+                    </div>
+                    <h2>Unité</h2>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Unité</div><div class="info-content">Laboratoire d'architecture et technologies éphémères</div></li>
+                        <li><div class="info-label">Acronyme</div><div class="info-content">LASE</div></li>
+                        <li><div class="info-label">Hiérarchie</div><div class="info-content"><a href="">EPFL</a> / <a href="">ENAC</a> / <a href="">IA</a> / <a href="">LASE</a></div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separator-bar">
+                <div class="bar"></div>
+            </div>
+            <!--Profil de l'accréditation-->
+            <div class="form-block">
+                <header class="flex-container">
+                    <div class="form-block-icon edit-mode">
+                        <mat-icon class="mat-icon icon-16" svgIcon="settings"></mat-icon>
+                    </div>
+                    <h2>Profil de l'accréditation</h2>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Statut EPFL</div><div class="info-content">Hôte</div></li>
+                        <li><div class="info-label">Classe</div><div class="info-content">164486</div></li>
+                        <li><div class="info-label">Date de début</div><div class="info-content">14 / 10 / 2020</div></li>
+                        <li><div class="info-label">Échéance</div><div class="info-content">14 / 01 / 2021</div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separator-bar">
+                <div class="bar"></div>
+            </div>
+
+            <!--Fonction-->
+            <div class="form-block">
+                <header class="flex-container">
+                    <div class="form-block-icon edit-mode">
+                        <mat-icon class="mat-icon icon-16" svgIcon="award"></mat-icon>
+                    </div>
+                    <h2>Fonction</h2>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Libellé masculin</div><div class="info-content">Consultant scientifique</div></li>
+                        <li><div class="info-label">Libellé féminin</div><div class="info-content">Consultante scientifique</div></li>
+                        <li><div class="info-label">Libellé en anglais</div><div class="info-content">Scientific Consultant</div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separator-bar">
+                <div class="bar"></div>
+            </div>
+
+            <!--Autorisations-->
+            <div class="form-block">
+                <header class="flex-container">
+                    <div class="form-block-icon">
+                        <mat-icon class="mat-icon icon-16" svgIcon="key"></mat-icon>
+                    </div>
+                    <h2>Autorisations</h2>
+                </header>
+                <div class="block-content">
+                    <table class="accred-table mat-table mobile-table">
+                        <tr>
+                            <th colspan="3">Hôte<br><span class="grey">Accès IT</span><mat-icon class="mat-icon icon-16" svgIcon="chevron-down"></mat-icon></th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><mat-icon class="mat-icon icon-16" svgIcon="corner-down-right"></mat-icon></td>
+                            <td>Parution dans l'annuaire Web<br><span class="grey">People</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><mat-icon class="mat-icon icon-16" svgIcon="corner-down-right"></mat-icon></td>
+                            <td>Compte utilisateur dans Active Directory<br><span class="grey">AD</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><mat-icon class="mat-icon icon-16" svgIcon="corner-down-right"></mat-icon></td>
+                            <td>Droits Camipro associés<br><span class="grey">Camipro</span></td>
+                        </tr>
+                        <tr class="disabled">
+                            <td></td>
+                            <td><mat-icon class="mat-icon icon-16" svgIcon="corner-down-right"></mat-icon></td>
+                            <td>Gestion de son profil<br><span class="grey">People</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><mat-icon class="mat-icon icon-16" svgIcon="corner-down-right"></mat-icon></td>
+                            <td>Présence dans les mailing listes d'unités<br><span class="grey">Mailing lists</span></td>
+                        </tr>
+                        <tr class="disabled">
+                            <td></td>
+                            <td><mat-icon class="mat-icon icon-16" svgIcon="corner-down-right"></mat-icon></td>
+                            <td>Posséder un no. de téléphone<br><span class="grey">UC</span></td>
+                        </tr>
+                        <tr class="disabled"> 
+                            <td></td>
+                            <td><mat-icon class="mat-icon icon-16" svgIcon="corner-down-right"></mat-icon></td>
+                            <td>Stockage individuel<br><span class="grey">MyNAS</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="separator-bar">
+                <div class="bar"></div>
+            </div>
+
+            <!--Finalisation-->
+            <div class="form-block">
+                <header class="flex-container">
+                    <div class="form-block-icon">
+                        <mat-icon class="mat-icon icon-16" svgIcon="check"></mat-icon>
+                    </div>
+                    <h2>Finalisation<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                </header>
+                <div class="block-content">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Commentaire</div><div class="info-content">Demande par e-mail reçue du responsable d'unité</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
+ </div> <!--END accred-accreditation-form-->

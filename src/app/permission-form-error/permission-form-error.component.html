@@ -1,0 +1,78 @@
+<div class="global-page accred-accreditation-form">
+    <div class="title-bar title-bar-splitted">
+        <div class="title-bar-left">
+            <a class="back-button" href="#"><mat-icon class="mat-icon icon-16" svgIcon="corner-up-left"></mat-icon>Annuler</a>
+            <h1 class="page-title">Nouvelle autorisation</h1>
+        </div>
+        <div class="title-bar-right">
+            <button class="accred-button accred-button-tertiary">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="x-circle"></mat-icon> Annuler et refermer 
+            </button>
+            <button class="accred-button accred-button-red">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="save"></mat-icon> Sauvegarder brouillon 
+            </button>
+        </div>
+    </div>
+    <div class="page-content flex-container">
+        <div class="left-part-line-container"><div class="left-part-line"></div></div>
+        <div class="accred-form-blocks">
+            <!--Personne accréditée-->
+            <div class="form-block">
+                <div class="form-block-icon edit-mode">
+                    <mat-icon class="mat-icon icon-16" svgIcon="user-plus"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Accréditation<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                        <ul class="form-block-list">
+                            <li><div class="info-label">Utilisateur</div><div class="info-content"><a href="#">Jean-Loup De La Batellerie</a></div></li>
+                            <li><div class="info-label">Sciper</div><div class="info-content">164486</div></li>
+                            <li><div class="info-label">Unité</div><div class="info-content"><a href="#">LASE</a></div></li>
+                            <li><div class="info-label">Échéance</div><div class="info-content">14 / 01 / 2021</div></li>
+                        </ul>
+                </div>
+            </div>
+            <!--Unité-->
+            <div class="form-block">
+                <div class="form-block-icon error">
+                    <mat-icon class="mat-icon icon-16" svgIcon="alert-circle"></mat-icon>
+                </div>
+                <header class="flex-container">
+                    <h2>Rôles et droits<a href="#" class="help-link accred-tooltip" #tooltip="matTooltip" matTooltipPosition="above" matTooltip="Tooltip message."><mat-icon class="icon-16 icon-grey" mat-list-icon svgIcon="help-circle"></mat-icon></a></h2>
+                    <button class="accred-button accred-button-tertiary">
+                        <mat-icon class="mat-icon mat-icon-left" svgIcon="edit"></mat-icon> Modifier 
+                    </button>
+                </header>
+                <div class="block-content">
+                    <span class="red"><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="lock"></mat-icon> Des rôles et droits sélectionnés sont soumis à un workflow de validation. Merci de choisir un des validateurs proposés.</span>
+                    <ul class="form-block-list">
+                        <li><div class="info-label">ICRHSAL</div><div class="info-content">Infocentre RH lecture de fonds</div></li>
+                        <li><div class="info-label"><span class="red">ICRHBASE.SC</span></div>
+                            <div class="info-content flex-container">
+                                <div class="sub-content">Consultation des données d'engagement, salariales, personnelles, formation continue, accès pour les services centraux uniquement
+                                </div>
+                                <div class="sub-content">
+                                    <div class="accred-select">
+                                        <mat-select class="accred-select">
+                                            <mat-option value="option3">Choisissez un validateur…</mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="sub-content">
+                                    <button class="accred-button accred-button-tertiary">
+                                        <mat-icon class="mat-icon mat-icon-left" svgIcon="x-circle"></mat-icon> Retirer 
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
+        
+ </div> <!--END accred-accreditation-form-->

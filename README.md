@@ -29,8 +29,32 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Example pages available
 
 Components: http://localhost:4200/
-Accrediation list: http://localhost:4200/accreditation
+Accreditation list: http://localhost:4200/accreditation
+Accreditation form: http://localhost:4200/accreditation-form
+Accreditation form (édition): http://localhost:4200/accreditation-form-edit
 Vue d'ensemble: http://localhost:4200/vue-ensemble
+
+### New
+Entrée de catalogue avec metadata: http://localhost:4200/catalog-entry
+Recherche et filtre, exemple ici pour les unités: http://localhost:4200/accreditation-units
+Erreur : http://localhost:4200/permission-form-error
+Action principales: http://localhost:4200/key-actions
+Modification ordre d’accréditation : http://localhost:4200/key-actions-order
+Renouvellement avec date d’échéance : http://localhost:4200/accreditation-renew
+
+
+## Example pages (mobile) available
+See it in a window under 767px wide.
+
+Accreditation form(mobile): http://localhost:4200/accreditation-form-mobile
+Accreditation list(mobile): http://localhost:4200/accreditation-mobile
+
+### New
+Détail d’une personne : http://localhost:4200/catalog-entry-mobile
+Détail autorisation : Renouvellement avec date d’échéance : http://localhost:4200/accreditation-renew
+
+
+
 
 ## Further help
 

@@ -1,7 +1,7 @@
 <div class="global-page accred-accreditation">
     <div class="title-bar title-bar-splitted">
         <div class="title-bar-left">
-            <h1 class="page-title">Accréditations</h1>
+            <h1 class="page-title">Accréditations (units sample)</h1>
         </div>
         <div class="title-bar-right">
             <button class="accred-button accred-button-red">
@@ -26,11 +26,59 @@
             <button class="accred-button accred-button-white">
                 <mat-icon class="mat-icon mat-icon-left" svgIcon="activity"></mat-icon> États <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
             </button>
-
-            <button class="accred-button accred-button-white">
-                <mat-icon class="mat-icon mat-icon-left" svgIcon="briefcase"></mat-icon> Unités <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
-            </button>
-
+            <div class="button-wrapper">
+                <button class="accred-button accred-button-white accred-button-white--selected">
+                    <mat-icon class="mat-icon mat-icon-left" svgIcon="briefcase"></mat-icon> Unités <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
+                </button>
+                <div class="button-submenu">
+                    <div class="submenu-header">
+                        <div class="accred-input-wrapper">
+                            <div class="input-container icon-left">
+                                <mat-icon class="input-icon icon-16" mat-list-icon svgIcon="search"></mat-icon>
+                                <input id="accred-example-input" class="accred-input" type="text" placeholder="Rechercher…">
+                            </div>
+                        </div>
+                        <mat-icon class="mat-icon mat-icon-right" svgIcon="x"></mat-icon>
+                    </div>
+                    <div class="submenu-content">
+                        <mat-tree [dataSource]="dataSourceTree" [treeControl]="treeControl">
+                            <!-- This is the tree node template for leaf nodes -->
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding matTreeNodePaddingIndent="30">
+                              <!-- use a disabled button to provide padding for tree leaf -->
+                              <button mat-icon-button disabled disableRipple class="accred-tree"></button>
+                              <mat-checkbox class="checklist-leaf-node"></mat-checkbox>
+                              {{node.name}}<span class="grey">{{node.subName}}</span>
+                              <div class="vertical-line vertical-line--1 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                              <div class="vertical-line vertical-line--2 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                                <div class="vertical-line vertical-line--3 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                                <div class="vertical-line vertical-line--4 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                                <div class="vertical-line vertical-line--5 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                            </mat-tree-node>
+                            <!-- This is the tree node template for expandable nodes -->
+                            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodePaddingIndent="30">
+                              <button mat-icon-button matTreeNodeToggle disableRipple class="accred-tree" [attr.aria-label]="'Toggle ' + node.name">
+                                <mat-icon class="mat-icon icon-16 icon-grey" svgIcon="{{treeControl.isExpanded(node) ? 'minus-circle' : 'plus-circle'}}"></mat-icon>
+                              </button>
+                              <mat-checkbox class="checklist-leaf-node"></mat-checkbox>
+                              {{node.name}}<span class="grey">{{node.subName}}</span>
+                                <div class="vertical-line vertical-line--1 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                                <div class="vertical-line vertical-line--2 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                                <div class="vertical-line vertical-line--3 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                                <div class="vertical-line vertical-line--4 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                                <div class="vertical-line vertical-line--5 {{treeControl.isExpanded(node) ? 'visible' : 'hidden'}}"></div>
+                            </mat-tree-node>
+                          </mat-tree>
+                    </div>
+                    <div class="submenu-footer">
+                        <button class="accred-button accred-button-red ">
+                            <mat-icon class="mat-icon mat-icon-left" svgIcon="check-square"></mat-icon> Appliquer le filtre
+                        </button>
+                        <button class="accred-button accred-button-tertiary ">
+                            <mat-icon class="mat-icon mat-icon-left" svgIcon="x-square"></mat-icon> Décocher tout
+                        </button>
+                    </div>
+                </div>
+            </div>        
             <button class="accred-button accred-button-white">
                 <mat-icon class="mat-icon mat-icon-left" svgIcon="users"></mat-icon> Personnes <mat-icon class="mat-icon mat-icon-right" svgIcon="chevron-down"></mat-icon>
             </button>

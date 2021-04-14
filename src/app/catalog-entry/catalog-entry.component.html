@@ -1,0 +1,76 @@
+<div class="global-page accred-catalog-entry">
+    <a class="back-button" href="#"><mat-icon class="mat-icon icon-16" svgIcon="corner-up-left"></mat-icon>Revenir en arrière</a>
+    <div class="title-bar title-bar-splitted">
+        <div class="title-bar-left">
+            <div class="user-info flex-container">
+                <div class="avatar-container">
+                    <div class="avatar"><img src="assets/imgs/avatar-sample.jpg"></div>
+                </div>
+                <div>
+                    <h1 class="page-title">Jean-Loup De La Batellerie</h1>
+                    <p>Crée le 15 Janvier 2015 par <span class="red">Patrick Mueller</span></p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="title-bar-right">
+            <button class="accred-button accred-button-tertiary">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="star"></mat-icon> Ajouter à ma vue d'ensemble 
+            </button>
+            <button class="accred-button accred-button-white">
+                <mat-icon class="mat-icon mat-icon-left" svgIcon="plus"></mat-icon> Actions principales 
+            </button>
+        </div>
+    </div>
+    <div class="page-content flex-container">
+        <mat-tab-group class="accred-tabgroup" disableRipple>
+            <mat-tab>
+                <ng-template mat-tab-label class="accred-tabgroup-label">
+                    <img class="accred-tabgroup-label-img" src="../assets/icons/bookOpen.svg">
+                    Données
+                </ng-template>
+                <div class="tab-content flex-container">
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Nom usuel</div><div class="info-content">De La Batellerie</div></li>
+                        <li><div class="info-label">Prénom usuel</div><div class="info-content">Jean-Loup</div></li>
+                        <li><div class="info-label">Nom officiel</div><div class="info-content">De La Batellerie</div></li>
+                        <li><div class="info-label">Prénom officiel</div><div class="info-content">Jean-Loup</div></li>
+                        <li><div class="info-label">SCIPER</div><div class="info-content">164486</div></li>
+                        <li><div class="info-label">Genre</div><div class="info-content">Masculin</div></li>
+
+                    </ul>
+                    <ul class="form-block-list">
+                        <li><div class="info-label">Email</div><div class="info-content"><a href="mailto:jean-loup.delabatellerie@epfl.ch">jean-loup.delabatellerie@epfl.ch</a></div></li>
+                        <li><div class="info-label">Téléphone</div><div class="info-content">164486</div></li>
+                        <li><div class="info-label">Date de naissance</div><div class="info-content">12 / 03 / 1992</div></li>
+                        <li><div class="info-label">Date de création</div><div class="info-content">15 / 01 / 2015</div></li>
+                        <li><div class="info-label">Matricule</div><div class="info-content">123456789</div></li>
+                        <li><div class="info-label">Autres informations</div><div class="info-content"><mat-icon class="mat-icon mat-icon-left icon-16" svgIcon="external-link"></mat-icon> <a href="#">Consulter dans People</a></div></li>
+                    </ul>
+                </div>
+                
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label class="accred-tabgroup-label">
+                    <img class="accred-tabgroup-label-img" src="../assets/icons/user.svg">
+                    Accréditations
+                </ng-template>
+                <h4>Accréditations</h4>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label class="accred-tabgroup-label">
+                    <img class="accred-tabgroup-label-img" src="../assets/icons/key.svg">
+                    Autorisations
+                </ng-template>
+                <h4>Autorisations</h4>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label class="accred-tabgroup-label">
+                    <img class="accred-tabgroup-label-img" src="../assets/icons/folder.svg">
+                    Historique
+                </ng-template>
+                <h4>Historique</h4>
+            </mat-tab>
+        </mat-tab-group>
+        
+ </div> <!--END accred-accreditation-form-->
